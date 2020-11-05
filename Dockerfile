@@ -9,7 +9,7 @@ ARG VERSION=0.0.11
 
 # Labels
 LABEL com.wiorca.build-date=$BUILD_DATE \
-      com.wiorca.vcs-url="https://github.com/wiorca/docker-windscribe.git" \
+      com.wiorca.vcs-url="https://github.com/benoistx/docker-windscribe.git" \
       com.wiorca.vcs-ref=$VCS_REF \
       com.wiorca.schema-version=$VERSION
 
@@ -18,7 +18,7 @@ VOLUME [ "/config" ]
 
 # Some environment variables
 ENV DEBIAN_FRONTEND=noninteractive \
-    TZ=America/Toronto \
+    TZ=Europe/Paris \
     PUID=1000 \
     PGID=1000 \
     WINDSCRIBE_USERNAME=username \
@@ -26,7 +26,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     WINDSCRIBE_PROTOCOL=stealth \
     WINDSCRIBE_PORT=80 \
     WINDSCRIBE_PORT_FORWARD=9999 \
-    WINDSCRIBE_LOCATION=US \
+    WINDSCRIBE_LOCATION=FR \
     WINDSCRIBE_LANBYPASS=on \
     WINDSCRIBE_FIREWALL=on
 
